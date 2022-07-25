@@ -29,6 +29,8 @@ class Fruit extends SpriteComponent with HasGameRef, CollisionCallbacks {
   void onCollision(Set<Vector2> intersectionPoints, PositionComponent other) {
     super.onCollision(intersectionPoints, other);
 
-    if (other is Charlie) {}
+    if (other is Charlie) {
+      removeFromParent();
+    }
   }
 }
